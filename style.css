@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+h1{
+    text-align: center;
+    color: aquamarine;
+    font-family: cursive;
+}
+
+h3{
+    border-radius: 10px;
+    border: 2px dotted lawngreen;
+    color: aqua;
+}
+

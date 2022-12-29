@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Js-Handson-11 [Inheritannce & prototype]</title>
+</head>
+<body>
+    <h1>JavaScript Handson - 11 [Inheritannce & prototype]</h1>
+    <br>
+    <pre><p>Q.1) Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype.</p></pre>
+    <pre>Ans: <h3>
+                            const obj1 ={
+                                calc(){
+                                    console.log(`${this.fName}`);
+                                },
+                                age(){
+                                    console.log(`${this.age}`);
+                                }
+                            }
+                            let child1 = Object.create(obj1);
+                            child.fName = "sam";
+                            child.calc();
+                            
+                            let child2 = Object.create(obj1);
+                            child.age = "sam";
+                            child.age();
+    </h3></pre><br><hr>
+    <pre><p>Q.2) Write code to explain prototype chaining.</p></pre>
+    <pre>Ans: <h3>
+                            let chain={
+                                faiz:"not my name",
+                                age:23,
+                                career:"SE"
+                            }
+                            let example1 = {
+                                name:"Sam",
+                                surname:"Jhon",
+                            
+                            }
+                            let example2 = {
+                                iq:"150",
+                                apptitude:"nill"
+                            }
+                            
+                            example1.__proto__ = chain;
+                            console.log(example1.age);
+    </h3></pre>
+    <pre><p>Q.3) Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays.</p></pre>
+    <pre>Ans: <h3>
+                            const addSum = {
+                                add : function(a){
+                                    let sum = 0;
+                                    for(let i = 0; i < a.length; i++){
+                                        sum += a[i];
+                                    }
+                                    console.log(sum);
+                                }
+                            }
+                            
+                            addSum.add([89,77,55,67,88]);
+    </h3></pre>
+    <pre><p>Q.4) Write a JavaScript function to retrieve all the names of object's own and inherited properties.</p></pre>
+    <pre>Ans: <h3>
+                            let set = {
+                                legs:4,
+                                moves:'fast',
+                                crawl:true
+                            }
+                            
+                            let obj1 = {
+                                pets:"dog,cat,birds",
+                                living:"in home with us",
+                                loyal:true
+                            }
+                            
+                            let obj2 = {
+                                func:function humans(){
+                                    console.log("cruel");
+                                }
+                            }
+                            console.log(obj1.hasOwnProperty('pets'));
+    </h3></pre>
+</body>
+</html>
